@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom"
 import HomePage from "../pages/HomePage"
 import Componentes from "../pages/Componentes"
 import Administracion from "../pages/Administracion"
-import Stock from "../pages/Stock"
+
+import Factura from "../pages/Factura"
 
 const AppRoutes: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/Componentes" element={<Componentes/>}/>
         <Route path="/Administracion" element={<Administracion/>}/>
-        <Route path="/Stock" element={<Stock/>}/>
+        <Route path="/Factura" element={<Factura/>}/>
     </Routes>
   )
 }

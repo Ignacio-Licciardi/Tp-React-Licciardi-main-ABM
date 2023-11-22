@@ -9,6 +9,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 import { useNavigate } from 'react-router-dom';
+import './Header.css';
 
 
 const Header = () => {
@@ -16,11 +17,11 @@ const Header = () => {
    const navigate = useNavigate();
     return(
     <>
-<Navbar className="nav">
+<Navbar className="nav header-navbar">
         <Container className='container'>
           <Navbar.Brand >
             <img
-              src="src/assets/images/Logo.svg"
+              src="/images/Logo.svg"
               alt="Logo el buen sabor"
               id="LogoNavPrincipal"
             />
@@ -30,7 +31,7 @@ const Header = () => {
             <Nav className="col-6 list-unstyled d-inline-flex mt-0">
               <Nav.Link href="#action1">Listado de pedido</Nav.Link>
               <Nav.Link onClick={() => navigate('/Administracion')}>Administracion</Nav.Link>
-              <Nav.Link onClick={() => navigate('/Stock')}>Stock</Nav.Link>
+              <Nav.Link onClick={() => navigate('/Factura')}>Factura</Nav.Link>
             </Nav>
 
           

@@ -1,0 +1,21 @@
+/* Especifica que solo los enlaces dentro del Navbar del Header tendrán color negro */
+.header-navbar .nav-link {
+    color: black !important; 
+}
+
+/* Agrega espacio entre la lupa y el campo de búsqueda solo en el Header */
+.header-navbar .form-control {
+    margin-left: 10px; 
+}
+
+/* Elimina el fondo, bordes y sombras solo de los elementos dentro del Navbar del Header */
+.header-navbar .nav, 
+.header-navbar .nav-link, 
+.header-navbar .form-control, 
+.header-navbar .btn, 
+.header-navbar .dropdown-toggle {
+    background: none !important;
+    border: none !important;
+    
+}
+

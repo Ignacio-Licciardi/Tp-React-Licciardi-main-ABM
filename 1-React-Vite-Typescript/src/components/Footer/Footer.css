@@ -1,3 +1,18 @@
 .footer{
     background-color: #CF5C36;
 }
+
+/* Agrega margen a los íconos de redes sociales */
+.footer .row-cols-1 .d-inline-block {
+    margin-right: 10px;
+}
+
+/* Agrega margen a los íconos de métodos de pago */
+.footer .row-cols-1 img {
+    margin-right: 15px; 
+}
+
+
+.footer .row-cols-1 img:last-child {
+    margin-right: 0;
+}

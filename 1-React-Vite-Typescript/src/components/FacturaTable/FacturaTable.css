@@ -1,0 +1,35 @@
+.nueva-factura-btn {
+    margin: 12px;
+  }
+
+.table {
+    width: 100%;
+    margin: auto; 
+    border-spacing: 0; 
+    border-collapse: separate;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  
+  .table thead th {
+    background-color: #dcdcdc; 
+    padding: 12px 8px;
+    border-bottom: 2px solid #bbbbbb60; 
+  }
+  
+
+  .table tbody td {
+    padding: 10px 8px;
+    border-bottom: 1px solid gray; 
+  }
+
+  .table button {
+    margin: 0 4px; 
+  }
+  
+
+  .table button svg {
+    vertical-align: middle;
+  }
+  
