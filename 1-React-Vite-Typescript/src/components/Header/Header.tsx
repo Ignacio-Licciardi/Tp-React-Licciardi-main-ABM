@@ -10,11 +10,19 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
+import useIsLoggedIn from '../../hooks/useIsLoggedIn';
 
 
 const Header = () => {
-    
-   const navigate = useNavigate();
+
+   
+  const navigate = useNavigate();
+  const isLoggedIn: boolean = useIsLoggedIn();
+
+  function onLogOut(){
+    window.localStorage.removeItem('isLoggedIn');
+    navigate('/');
+  }
     return(
     <>
 <Navbar className="nav header-navbar">
@@ -30,8 +38,9 @@ const Header = () => {
           <Navbar.Collapse id="navbar-nav" className="btn">
             <Nav className="col-6 list-unstyled d-inline-flex mt-0">
               <Nav.Link href="#action1">Listado de pedido</Nav.Link>
-              <Nav.Link onClick={() => navigate('/Administracion')}>Administracion</Nav.Link>
+              <Nav.Link onClick={() => navigate('/ArticuloInsumo')}>Stock</Nav.Link>
               <Nav.Link onClick={() => navigate('/Factura')}>Factura</Nav.Link>
+              {isLoggedIn && <Nav.Link onClick={onLogOut}>Log Out</Nav.Link>}
             </Nav>
 
           
@@ -66,6 +75,7 @@ const Header = () => {
                               <path d="M6.75146 5.75C6.76055 4.11873 6.83288 3.23529 7.40917 2.65901C8.0682 2 9.12885 2 11.2502 2H12.0002C14.1215 2 15.1822 2 15.8411 2.65901C16.5002 3.31802 16.5002 4.37868 16.5002 6.5V12.5C16.5002 14.6213 16.5002 15.6819 15.8411 16.341C15.1822 17 14.1215 17 12.0002 17H11.2502C9.12885 17 8.0682 17 7.40917 16.341C6.83288 15.7647 6.76055 14.8812 6.75146 13.25" stroke="black" stroke-width="1.125" stroke-linecap="round"/>
                               <path d="M11.25 9.5H1.5M1.5 9.5L4.125 7.25M1.5 9.5L4.125 11.75" stroke="black" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+          
           Salir</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
